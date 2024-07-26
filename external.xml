@@ -9,6 +9,10 @@
   <remote name="custom"
           fetch="https://github.com"
           revision="lineage-21.0" />
+
+  <remote name="cherish"
+          fetch="https://github.com/cherishOS"
+          revision="udc"
     
   <!-- General -->
   <project path="kernel/configs" name="android-kxxt/android_kernel_configs" remote="custom" />
