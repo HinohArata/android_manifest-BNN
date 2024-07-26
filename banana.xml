@@ -4,6 +4,10 @@
   <remote name="banana"
           fetch="https://github.com/bananadroid"
           revision="14" />
+  
+  <remote name="skyy"
+          fetch="https://github.com/HinohArata"
+          revision="14" />
 
   <remote name="github"
           fetch="https://github.com" />
@@ -18,7 +22,7 @@
   <remote name="banana-devices"
           fetch="https://github.com/bananadroid-devices" />
 
-  <project path="manifest" name="android_manifest" remote="banana" />
+  <project path="manifest" name="android_manifest-BNN" remote="skyy" />
   <project path="art" name="android_art" remote="banana" />
   <project path="bionic" name="android_bionic" remote="banana" />
   <project path="bootable/recovery" name="android_bootable_recovery" remote="banana" />
