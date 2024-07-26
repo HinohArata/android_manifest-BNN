@@ -6,69 +6,73 @@
           review="https://review.lineageos.org/"
           revision="lineage-21.0" />
 
+  <remote name="custom"
+          fetch="https://github.com"
+          revision="lineage-21.0" />
+    
   <!-- General -->
-  <project path="kernel/configs" name="android_kernel_configs" remote="lineage" />
+  <project path="kernel/configs" name="android-kxxt/android_kernel_configs" remote="custom" />
 
   <!-- Device -->
   <project path="device/qcom/common" name="AOSPA/android_device_qcom_common" revision="uvite" remote="github" />
-  <project path="device/qcom/sepolicy" name="android_device_qcom_sepolicy" remote="lineage" />
-  <project path="device/qcom/sepolicy_vndr/legacy-um" name="android_device_qcom_sepolicy_vndr" revision="lineage-21.0-legacy-um" remote="lineage" />
-  <project path="device/qcom/sepolicy_vndr/sm8450" name="android_device_qcom_sepolicy_vndr" revision="lineage-21.0-caf-sm8450" remote="lineage" />
-  <project path="device/qcom/sepolicy_vndr/sm8550" name="android_device_qcom_sepolicy_vndr" revision="lineage-21.0-caf-sm8550" remote="lineage" />
+  <project path="device/qcom/sepolicy" name="android_device_qcom_sepolicy" revision="udc" remote="cherish" />
+  <project path="device/qcom/sepolicy_vndr/legacy-um" name="xiaomi-sm8150-devs/android_device_qcom_sepolicy_vndr" revision="lineage-21.0-legacy-um" remote="custom" />
+  <project path="device/qcom/sepolicy_vndr/sm8450" name="xiaomi-sm8150-devs/android_device_qcom_sepolicy_vndr" revision="lineage-21.0-caf-sm8450" remote="custom" />
+  <project path="device/qcom/sepolicy_vndr/sm8550" name="xiaomi-sm8150-devs/android_device_qcom_sepolicy_vndr" revision="lineage-21.0-caf-sm8550" remote="custom" />
 
   <!-- External -->
   <project path="external/ant-wireless/ant_client" name="android_external_ant-wireless_ant_client" remote="lineage" />
   <project path="external/ant-wireless/ant_native" name="android_external_ant-wireless_ant_native" remote="lineage" />
   <project path="external/ant-wireless/ant_service" name="android_external_ant-wireless_ant_service" remote="lineage" />
   <project path="external/ant-wireless/hidl" name="android_external_ant-wireless_hidl" remote="lineage" />
-  <project path="external/chromium-webview/patches" name="android_external_chromium-webview_patches" remote="lineage" revision="main" >
+  <project path="external/chromium-webview/patches" name="ProjectDiablo/android_external_chromium-webview_patches" remote="custom" revision="main" >
     <linkfile src="Android.mk" dest="external/chromium-webview/Android.mk" />
     <linkfile src="CleanSpec.mk" dest="external/chromium-webview/CleanSpec.mk" />
     <linkfile src="README" dest="external/chromium-webview/README" />
   </project>
-  <project path="external/chromium-webview/prebuilt/arm" name="android_external_chromium-webview_prebuilt_arm" remote="lineage" revision="main" />
-  <project path="external/chromium-webview/prebuilt/arm64" name="android_external_chromium-webview_prebuilt_arm64" remote="lineage" revision="main" />
-  <project path="external/chromium-webview/prebuilt/x86" name="android_external_chromium-webview_prebuilt_x86" remote="lineage"  revision="main" />
-  <project path="external/chromium-webview/prebuilt/x86_64" name="android_external_chromium-webview_prebuilt_x86_64" remote="lineage" revision="main" />
+  <project path="external/chromium-webview/prebuilt/arm" name="ProjectDiablo/android_external_chromium-webview_prebuilt_arm" remote="custom" revision="main" />
+  <project path="external/chromium-webview/prebuilt/arm64" name="ProjectDiablo/android_external_chromium-webview_prebuilt_arm64" remote="custom" revision="main" />
+  <project path="external/chromium-webview/prebuilt/x86" name="ProjectDiablo/android_external_chromium-webview_prebuilt_x86" remote="custom"  revision="main" />
+  <project path="external/chromium-webview/prebuilt/x86_64" name="ProjectDiablo/android_external_chromium-webview_prebuilt_x86_64" remote="custom" revision="main" />
   <project path="external/cronet" name="android_external_cronet" remote="lineage" />
-  <project path="external/dtc" name="android_external_dtc" remote="lineage" />
+  <project path="external/dtc" name="Taofiq-Anam/android_external_dtc" remote="custom" />
   <project path="external/exfatprogs" name="android_external_exfatprogs" remote="lineage" />
   <project path="external/gptfdisk" name="android_external_gptfdisk" remote="lineage" />
   <project path="external/json-c" name="android_external_json-c" remote="lineage" />
-  <project path="external/libcxx" name="android_external_libcxx" remote="lineage" />
-  <project path="external/libnl" name="android_external_libnl" remote="lineage" />
-  <project path="external/libvpx" name="android_external_libvpx" remote="lineage" />
+  <project path="external/libcxx" name="CherishOS/android_external_libcxx" revision="udc" remote="custom" />
+  <project path="external/libnl" name="PixelBuildsROM/android_external_libnl" remote="custom" revision="unity" />
+  <project path="external/libvpx" name="LeafOS-experimental/android_external_libvpx" revision="leaf-2.0" remote="custom" />
   <project path="external/mksh" name="android_external_mksh" remote="lineage" />
   <project path="external/ntfs-3g" name="android_external_ntfs-3g" remote="lineage" />
   <project path="external/openssh" name="android_external_openssh" groups="pdk" remote="lineage" />
   <project path="external/rsync" name="android_external_rsync" remote="lineage" />
   <project path="external/tinycompress" name="android_external_tinycompress" remote="lineage" />
   <project path="external/unrar" name="android_external_unrar" remote="lineage" />
-  <project path="external/webp" name="android_external_webp" remote="lineage" />
-  <project path="external/zstd" name="android_external_zstd" remote="lineage" />
+  <project path="external/webp" name="crdroid-security/android_external_webp" remote="custom" />
+  <project path="external/zstd" name="android-generic/android_external_zstd" remote="custom" />
 
   <!-- Frameworks -->
-  <project path="frameworks/opt/calendar" name="android_frameworks_opt_calendar" remote="lineage" />
+  <project path="frameworks/opt/calendar" name="crdroidx/android_frameworks_opt_calendar" remote="custom" revision="14.0" />
   <project path="frameworks/opt/colorpicker" name="android_frameworks_opt_colorpicker" remote="lineage" />
   <project path="frameworks/opt/timezonepicker" name="android_frameworks_opt_timezonepicker" remote="lineage" />
 
   <!-- Hardware -->
-  <project path="hardware/broadcom/libbt" name="android_hardware_broadcom_libbt" remote="lineage" />
-  <project path="hardware/google/gchips" name="android_hardware_google_gchips" remote="lineage" />
-  <project path="hardware/google/graphics/common" name="android_hardware_google_graphics_common" remote="lineage" />
-  <project path="hardware/google/pixel" name="android_hardware_google_pixel" remote="lineage" />
-  <project path="hardware/libhardware" name="android_hardware_libhardware" remote="lineage" />
-  <project path="hardware/lineage/compat" name="android_hardware_lineage_compat" remote="lineage" />
+  <project path="hardware/broadcom/libbt" name="PixelExperience/hardware_broadcom_libbt" remote="custom" revision="fourteen" />
+  <project path="hardware/google/gchips" name="420rom/android_hardware_google_gchips" revision="420rom-14" remote="custom" />
+  <project path="hardware/google/graphics/common" name="420rom/android_hardware_google_graphics_common" revision="420rom-14" remote="lineage" />
+  <project path="hardware/google/pixel" name="Finnaib/android_hardware_google_pixel" remote="custom" />
+  <project path="hardware/libhardware" name="Evolution-X-AOSP/hardware_libhardware" revision="udc" remote="custom" />
+  <project path="hardware/lineage/compat" name="ItsPi3141-Surnia/android_hardware_lineage_compat" remote="custom" />
   <project path="hardware/lineage/livedisplay" name="android_hardware_lineage_livedisplay" remote="lineage" />
-  <project path="hardware/qcom/sm7250/display" name="android_hardware_qcom_sm7250_display" remote="lineage" />
-  <project path="hardware/qcom/sm7250/gps" name="android_hardware_qcom_sm7250_gps" remote="lineage">
+  <project path="hardware/qcom/sm7250/display" name="neroices/platform_hardware_qcom_sm7250_display" revision="14" remote="custom" />
+  <project path="hardware/qcom/sm7250/gps" name="halcyonproject/hardware_qcom_sm7250_gps" revision="ursinia" remote="custom">
     <linkfile src="os_pickup.mk" dest="hardware/qcom/sm7250/Android.mk" />
     <linkfile src="os_pickup.bp" dest="hardware/qcom/sm7250/Android.bp" />
   </project>
   <project path="hardware/qcom/sm7250/media" name="android_hardware_qcom_sm7250_media" remote="lineage" />
   <project path="hardware/qcom/sm8150/display" name="android_hardware_qcom_sm8150_display" remote="lineage" />
   <project path="hardware/qcom/sm8150/media" name="android_hardware_qcom_sm8150_media" remote="lineage" />
-  <project path="hardware/qcom/wlan" name="android_hardware_qcom_wlan" remote="lineage" />
+  <project path="hardware/qcom/wlan" name="Evolution-X-AOSP/hardware_qcom_wlan" revision="udc" remote="custom" />
   <project path="hardware/qcom/media" name="android_hardware_qcom_media" remote="lineage" />
   <project path="hardware/qcom/camera" name="android_hardware_qcom_camera" remote="lineage" />
   <project path="hardware/qcom/audio" name="android_hardware_qcom_audio" remote="lineage" />
@@ -109,17 +113,17 @@
   <project path="hardware/qcom-caf/thermal" name="android_hardware_qcom_thermal" remote="lineage" />
   <project path="hardware/qcom-caf/vr" name="android_hardware_qcom_vr" remote="lineage" />
   <project path="hardware/ril" name="android_hardware_ril" remote="lineage" />
-  <project path="hardware/xiaomi" name="android_hardware_xiaomi" revision="lineage-21" remote="lineage" />
+  <project path="hardware/xiaomi" name="nguyenhung9xdev2024/android_hardware_xiaomi" revision="lineage-21" remote="custom" />
 
   <!-- Packages -->
-  <project path="packages/apps/Aperture" name="android_packages_apps_Aperture" remote="lineage" />
+  <project path="packages/apps/Aperture" name="fazilsheik96/android_packages_apps_Aperture" remote="custom" />
   <project path="packages/apps/FMRadio" name="android_packages_apps_FMRadio" remote="lineage" />
   <project path="packages/apps/Glimpse" name="android_packages_apps_Glimpse" remote="lineage" />
   <project path="packages/apps/RepainterServicePriv" name="kdrag0n/android_packages_apps_RepainterServicePriv" revision="main" remote="github" />
-  <project path="packages/apps/Stk" name="android_packages_apps_Stk" remote="lineage" />
+  <project path="packages/apps/Stk" name="SkylineUI/packages_apps_Stk" revision="aosp-14" remote="custom" />
   <project path="packages/modules/Bluetooth/android/BtHelper" name="TheParasiteProject/packages_modules_Bluetooth_android_BtHelper" revision="14.0" remote="github" />
-  <project path="packages/providers/MediaProvider" name="android_packages_providers_MediaProvider" remote="lineage" />
-  <project path="packages/providers/TelephonyProvider" name="android_packages_providers_TelephonyProvider" remote="lineage" />
+  <project path="packages/providers/MediaProvider" name="Evolution-X-AOSP/packages_providers_MediaProvider" revision="udc" remote="custom" />
+  <project path="packages/providers/TelephonyProvider" name="Wheels564/android_packages_providers_TelephonyProvider" remote="custom" />
 
   <!-- Prebuilts -->
   <project path="prebuilts/clang/host/linux-x86" name="yaosp/prebuilts_clang_host_linux-x86" revision="fourteen" remote="gitlab" />
@@ -131,13 +135,13 @@
   <project path="prebuilts/tools-lineage" name="android_prebuilts_tools-lineage" clone-depth="1" remote="lineage" />
 
   <!-- System -->
-  <project path="system/extras" name="android_system_extras" remote="lineage" />
-  <project path="system/logging" name="android_system_logging" remote="lineage" />
-  <project path="system/media" name="android_system_media" remote="lineage" />
-  <project path="system/tools/mkbootimg" name="android_system_tools_mkbootimg" remote="lineage" />
+  <project path="system/extras" name="Evolution-X-AOSP/system_extras" revision="udc" remote="github" />
+  <project path="system/logging" name="Evolution-X-AOSP/system_logging" revision="udc" remote="github" />
+  <project path="system/media" name="Evolution-X-AOSP/system_media" revision="udc" remote="github" />
+  <project path="system/tools/mkbootimg" name="Evolution-X-AOSP/system_tools_mkbootimg" revision="udc" remote="github" />
 
   <!-- Tools -->
-  <project path="tools/extract-utils" name="android_tools_extract-utils" remote="lineage" />
+  <project path="tools/extract-utils" name="crdroidandroid/android_tools_extract-utils" revision="14.0" remote="github" />
 
   <!-- Vendor -->
   <project path="vendor/codeaurora/telephony" name="android_vendor_codeaurora_telephony" remote="lineage" />
